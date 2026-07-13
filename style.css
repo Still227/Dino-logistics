@@ -442,3 +442,27 @@ footer h3 {
     padding-top: 15px;
 }
 
+/* Styles pour les grands écrans (ordinateurs) */
+@media screen and (min-width: 1024px) {
+    
+    /* Exemple : Passer vos éléments d'une colonne (mobile) à une ligne (ordinateur) */
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Ajuster la taille du texte si nécessaire */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Si vous avez une grille de services, affichez-les côte à côte */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur PC */
+        gap: 20px;
+    }
+}
