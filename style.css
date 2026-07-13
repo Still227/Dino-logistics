@@ -466,3 +466,12 @@ footer h3 {
         gap: 20px;
     }
 }
+/* Styles pour les grands écrans (ordinateurs) */
+@media screen and (min-width: 1024px) {
+    
+    /* Si vous voulez adapter les classes de votre site, écrivez-les ici en anglais */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+}
