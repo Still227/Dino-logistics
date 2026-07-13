@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Excel - Logistique Internationale</title>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Les étoiles scintillantes en arrière-plan -->
+    <div class="star-cluster">
+        <div class="star" style="top: 15%; left: 10%; animation-delay: 0s;">✦</div>
+        <div class="star" style="top: 25%; left: 85%; animation-delay: 1s;">✦</div>
+        <div class="star" style="top: 45%; left: 70%; animation-delay: 0.5s;">✦</div>
+        <div class="star" style="top: 65%; left: 15%; animation-delay: 1.5s;">✦</div>
+        <div class="star" style="top: 80%; left: 80%; animation-delay: 2s;">✦</div>
+    </div>
+
+    <div class="container">
+        <!-- 1. En-tête avec Menu de Navigation -->
+        <header>
+            <div class="logo-area">
+                <div class="logo">DINO EXCEL</div>
+                <div class="header-actions">
+                    <span class="whatsapp-text">Discutez avec nous :</span>
+                    <a href="https://wa.me/22789481145" class="whatsapp-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/votre_username" class="telegram-btn" target="_blank">
+                        <i class="fa-paper-plane fas"></i>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#tracking">Suivi</a>
+                <a href="#devis">Devis</a>
+                <a href="#commentaires">Avis</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Badge Statut -->
+        <div class="badge">Logistique Internationale</div>
+
+        <!-- Titre avec effet d'écriture -->
+        <div class="welcome-box">
+            <div class="welcome-title">Bienvenue</div>
+        </div>
+
+        <!-- Alerte Fret Principal -->
+        <div class="alert-box">
+            <div class="status-dot"></div>
+            <div class="alert-text">
+                Fret de la semaine : <strong>Départ validé (Dans les temps)</strong>
+            </div>
+        </div>
+
+        <!-- Carte Principale Historique -->
+        <div class="card main-route">
+            <div class="route-title">CHINE 🇨🇳 ➔ NIGER 🇳🇪</div>
+            <div class="route-desc">
+                De la Chine au Niger, en passant par toute l'Afrique.
+            </div>
+            <button class="btn-action">Achat & Approvisionnement</button>
+            <div class="sub-service-desc">
+                Nous achetons pour vous en Chine avec une sécurité totale.
+            </div>
+        </div>
+
+        <!-- 2. Section Nos Services -->
+        <section id="services">
+            <h2 class="section-title">Nos Services</h2>
+            
+            <div class="card">
+                <h3>🛒 Achat en Chine</h3>
+                <p>Nous achetons vos produits directement auprès de fournisseurs fiables.</p>
+            </div>
+
+            <div class="card">
+                <h3>✈️ Fret Aérien</h3>
+                <p>Livraison rapide vers le Niger et toute l'Afrique.</p>
+            </div>
+
+            <div class="card">
+                <h3>🚢 Fret Maritime</h3>
+                <p>Solution économique pour les gros volumes.</p>
+            </div>
+
+            <div class="card">
+                <h3>📦 Vente de Produits</h3>
+                <p>Produits chinois de qualité disponibles.</p>
+            </div>
+
+            <div class="card">
+                <h3>🚛 Livraison Afrique</h3>
+                <p>Distribution dans plusieurs pays africains.</p>
+            </div>
+        </section>
+
+        <!-- 4. Section Suivi de colis -->
+        <section id="tracking">
+            <h2 class="section-title">Suivi de colis</h2>
+            <div class="card">
+                <input type="text" id="trackingInput" placeholder="Numéro de suivi (ex: DEX123)">
+                <button class="btn-action" id="trackingBtn" style="margin-top: 15px;">Rechercher</button>
+                
+                <!-- Zone où le statut du colis va s'afficher -->
+                <div id="trackingResult" style="margin-top:20px; text-align: center; display: none;">
+                    <p style="font-size: 1.1rem; font-weight: 600; color: #c084fc;" id="statusTitle"></p>
+                    <p style="margin-top:5px; color:#cbd5e1; font-size: 0.95rem;" id="statusDesc"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Section Demande de devis -->
+        <section id="devis">
+            <h2 class="section-title">Demander un devis</h2>
+            <form id="devisForm">
+                <input type="text" placeholder="Nom complet" required>
+                <input type="tel" placeholder="Téléphone" required>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Pays">
+                <input type="text" placeholder="Ville">
+                <select>
+                    <option>Transport aérien</option>
+                    <option>Transport maritime</option>
+                </select>
+                <textarea placeholder="Décrivez votre marchandise"></textarea>
+                <button type="submit" class="btn-action">Recevoir un devis</button>
+            </form>
+        </section>
+
+        <!-- 5. Section Commentaires -->
+        <section id="commentaires">
+            <h2 class="section-title">Votre avis</h2>
+            <form action="https://formsubmit.co/Chamsoudineboubacar172@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="http://localhost:8080">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <input type="text" name="Nom" placeholder="Votre nom" required>
+                <input type="email" name="Email" placeholder="Votre email">
+                <select name="Note">
+                    <option>⭐⭐⭐⭐⭐</option>
+                    <option>⭐⭐⭐⭐</option>
+                    <option>⭐⭐⭐</option>
+                    <option>⭐⭐</option>
+                    <option>⭐</option>
+                </select>
+                <textarea name="Commentaire" placeholder="Votre commentaire" required></textarea>
+                <button type="submit" class="btn-action">Envoyer</button>
+            </form>
+        </section>
+
+        <!-- 6. Section FAQ -->
+        <section id="faq">
+            <h2 class="section-title">FAQ</h2>
+            <div class="card">
+                <p><b>Quels pays desservez-vous ?</b></p>
+                <p style="color: #94a3b8; margin-top: 5px;">Toute l'Afrique.</p>
+            </div>
+            <div class="card">
+                <p><b>Quel est le délai ?</b></p>
+                <p style="color: #94a3b8; margin-top: 5px;">Selon le mode de transport choisi.</p>
+            </div>
+            <div class="card">
+                <p><b>Le colis est-il assuré ?</b></p>
+                <p style="color: #94a3b8; margin-top: 5px;">Oui selon l'offre choisie.</p>
+            </div>
+        </section>
+
+        <!-- 7. Conditions d'utilisation -->
+        <section id="conditions">
+            <h2 class="section-title">Conditions d'utilisation</h2>
+            <div class="card terms-card">
+                <p>✔ Les informations fournies doivent être exactes.</p>
+                <p>✔ Les délais sont estimatifs.</p>
+                <p>✔ Les marchandises interdites sont refusées.</p>
+                <p>✔ Les paiements doivent être effectués avant l'expédition selon les modalités convenues.</p>
+                <p>✔ Les frais de douane peuvent être à la charge du client selon le contrat.</p>
+                <p>✔ Les réclamations doivent être signalées dans les 7 jours suivant la réception.</p>
+            </div>
+        </section>
+
+        <!-- 8. Pied de page -->
+        <footer id="contact">
+            <h3>DINO EXCEL LOGISTICS</h3>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-phone"></i> Appels : +227 80 84 59 52</p>
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp et Appels : +227 89 48 11 45</p>
+                <p><i class="fa-regular fa-envelope"></i> Chamsoudineboubacar172@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Niger</p>
+            </div>
+            <p class="copyright">© 2026 Dino Excel Logistics. Powered by #StillRemember227</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
