@@ -58,4 +58,51 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+// Système de recherche automatique Dino Excel
+document.addEventListener('DOMContentLoaded', () => {
+    const bouton = document.getElementById('bouton-recherche-colis');
+    if (bouton) {
+        bouton.addEventListener('click', async () => {
+            const saisie = document.getElementById('num-colis-saisie').value.trim().toUpperCase();
+            const zoneResultat = document.getElementById('statut-colis-resultat');
+            
+            if (!saisie) {
+                zoneResultat.innerHTML = "<span style='color: red;'>Veuillez entrer un numéro.</span>";
+                return;
+            }
+
+            try {
+                // Le site va lire le fichier colis.txt
+                const reponse = await fetch('./colis.txt');
+                const texte = await reponse.text();
+                
+                // Découpage du fichier ligne par ligne
+                const lignes = texte.split('\n');
+                let statutTrouve = null;
+
+                for (let ligne of lignes) {
+                    if (ligne.toUpperCase().startsWith(saisie)) {
+                        statutTrouve = ligne.substring(ligne.indexOf(':') + 1).trim();
+                        break;
+                    }
+                }
+
+                if (statutTrouve) {
+                    // Si le colis contient le mot REJETÉ, on l'affiche en rouge
+                    if (statutTrouve.toUpperCase().includes('REJETÉ')) {
+                        zoneResultat.innerHTML = `<div style='padding: 10px; background: #fee2e2; border-left: 4px solid #ef4444; color: #991b1b;'>⚠️ ${statutTrouve}</div>`;
+                    } else {
+                        zoneResultat.innerHTML = `<div style='padding: 10px; background: #e0f2fe; border-left: 4px solid #0284c7; color: #0369a1;'>🟢 Statut : ${statutTrouve}</div>`;
+                    }
+                } else {
+                    zoneResultat.innerHTML = "<span style='color: #ea580c;'>Aucun colis trouvé avec ce numéro.</span>";
+                }
+
+            } catch (err) {
+                zoneResultat.innerHTML = "Erreur lors de la recherche. Réessayez.";
+                console.error(err);
+            }
+        });
+    }
+});
 
