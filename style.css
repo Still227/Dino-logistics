@@ -475,3 +475,21 @@ footer h3 {
     }
 
 }
+/* --- CORRECTION POUR RENDRE LE SITE BEAU SUR ORDINATEUR --- */
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px; /* Empêche le site de s'étaler trop largement */
+        margin: 40px auto; /* Centre tout le site au milieu de l'écran avec un espace en haut/bas */
+        background: #0f0720; /* Donne un fond bien structuré à votre boîte principale */
+        border-radius: 20px; /* Arrondit les angles du grand bloc */
+        padding: 40px; /* Donne de l'espace à l'intérieur pour que le texte respire */
+        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2); /* Ajoute un joli reflet violet autour */
+    }
+
+    /* Aligne les cartes de services proprement côte à côte sur ordinateur */
+    #services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
