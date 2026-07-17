@@ -37,7 +37,7 @@
             </div>
             <nav>
                 <a href="#services">Services</a>
-                <a href="#tracking">Suivi</a>
+                <a href="#num-colis-saisie">Suivi</a>
                 <a href="#devis">Devis</a>
                 <a href="#commentaires">Avis</a>
                 <a href="#contact">Contact</a>
@@ -57,13 +57,14 @@
             <div class="status-dot"></div>
             <div class="alert-text">
                 Fret de la semaine : <strong>Départ validé (Dans les temps)</strong>
-               <!-- Barre de recherche Dino Excel -->
-<div style="text-align: center; margin: 30px auto; padding: 20px; background: rgba(168, 85, 247, 0.1); border-radius: 10px; max-width: 400px;">
-    <h3 style="margin-top: 0;">📦 Suivi de Colis Individuel</h3>
-    <input type="text" id="num-colis-saisie" placeholder="Entrez votre numéro (Ex: DINO1001)" style="padding: 10px; width: 80%; border: 1px solid #a855f7; border-radius: 5px; text-align: center; font-size: 16px;">
-    <button id="bouton-recherche-colis" style="margin-top: 10px; padding: 10px 20px; background-color: #a855f7; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; width: 85%;">Rechercher mon colis</button>
-    <div id="statut-colis-resultat" style="margin-top: 15px; font-weight: bold; font-size: 16px; color: #333;"></div>
-</div>
+                
+                <!-- Barre de recherche Dino Excel -->
+                <div style="text-align: center; margin: 30px auto; padding: 20px; background: rgba(168, 85, 247, 0.1); border-radius: 10px; max-width: 400px;">
+                    <h3 style="margin-top: 0; color: white;">📦 Suivi de Colis Individuel</h3>
+                    <input type="text" id="num-colis-saisie" placeholder="Entrez votre numéro (Ex: DINO1001)" style="padding: 10px; width: 80%; border: 1px solid #a855f7; border-radius: 5px; text-align: center; font-size: 16px;">
+                    <button id="bouton-recherche-colis" style="margin-top: 10px; padding: 10px 20px; background-color: #a855f7; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; width: 85%;">Rechercher mon colis</button>
+                    <div id="statut-colis-resultat" style="margin-top: 15px; font-weight: bold; font-size: 16px;"></div>
+                </div>
                 
             </div>
         </div>
@@ -107,15 +108,6 @@
             <div class="card">
                 <h3>🚛 Livraison Afrique</h3>
                 <p>Distribution dans plusieurs pays africains.</p>
-            </div>
-        </section>
-
-        
-                <!-- Zone où le statut du colis va s'afficher -->
-                <div id="trackingResult" style="margin-top:20px; text-align: center; display: none;">
-                    <p style="font-size: 1.1rem; font-weight: 600; color: #c084fc;" id="statusTitle"></p>
-                    <p style="margin-top:5px; color:#cbd5e1; font-size: 0.95rem;" id="statusDesc"></p>
-                </div>
             </div>
         </section>
 
