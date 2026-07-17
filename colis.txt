@@ -1,4 +1,5 @@
 DINO1001 : Reçu à l'entrepôt de Guangzhou (25%)
 DINO1002 : REJETÉ - Marchandise interdite (0%)
-DINO1003 : Arrivé au Niger - Prêt pour retrait (100%)
+DINO1003 : Arrivé au Niger - Prêt pour retrait (100%  
+DINO1235 : Colis de Chamsou- Prêt pour retrait (100%)
   
