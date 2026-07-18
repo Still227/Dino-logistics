@@ -475,21 +475,52 @@ footer h3 {
     }
 
 }
-/* --- CORRECTION POUR RENDRE LE SITE BEAU SUR ORDINATEUR --- */
+/* --- CORRECTION FINALE ET PROPRE POUR ORDINATEUR --- */
 @media (min-width: 768px) {
     .container {
-        max-width: 900px; /* Empêche le site de s'étaler trop largement */
-        margin: 40px auto; /* Centre tout le site au milieu de l'écran avec un espace en haut/bas */
-        background: #0f0720; /* Donne un fond bien structuré à votre boîte principale */
-        border-radius: 20px; /* Arrondit les angles du grand bloc */
-        padding: 40px; /* Donne de l'espace à l'intérieur pour que le texte respire */
-        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2); /* Ajoute un joli reflet violet autour */
+        max-width: 850px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: #0f0720;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15);
+        display: block !important; /* Force le mode bloc simple */
     }
 
-    /* Aligne les cartes de services proprement côte à côte sur ordinateur */
+    /* Remet le menu du haut bien large et lisible */
+    header {
+        display: block !important;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    nav {
+        margin-top: 15px;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 12px;
+        display: inline-block;
+    }
+
+    /* Aligne proprement les services 2 par 2 sans utiliser grid */
     #services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        display: table !important;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 15px;
+    }
+    #services .card {
+        display: inline-block !important;
+        width: 45%;
+        margin: 10px 2%;
+        vertical-align: top;
+        min-height: 150px;
+        box-sizing: border-box;
+    }
+    
+    /* Repositionne la bienvenue pour qu'elle respire */
+    .welcome-box {
+        margin: 25px 0;
+        text-align: center;
     }
 }
